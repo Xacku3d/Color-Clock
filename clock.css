@@ -1,0 +1,15 @@
+body {
+    font-family: "Open Sans";
+    margin-top: 300px;
+    text-align: center;
+}
+
+#clock {
+    font-weight: 300;
+    color: white;
+    font-size: 120px;
+}
+
+#color {
+    color: white;
+}
