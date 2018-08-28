@@ -31,11 +31,4 @@ function newClock() {
 
 newClock();
 
-function startClock() {
-setTimeout(function updateClock() {
-    newClock();
-    startClock();
-}, 1000);
-}
-
-startClock();
+setInterval(newClock, 1000);
