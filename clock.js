@@ -1,3 +1,4 @@
+window.onload = function() {
 const clock = document.getElementById("clock");
 const color = document.getElementById("color");
 
@@ -32,3 +33,4 @@ function newClock() {
 newClock();
 
 setInterval(newClock, 1000);
+}
