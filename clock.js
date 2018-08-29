@@ -32,5 +32,26 @@ function newClock() {
 
 newClock();
 
-setInterval(newClock, 1000);
+Function.prototype.bind = function(parent) {
+    var f = this;
+    var args = [];
+
+    for (var a = 1; a < arguments.length; a++) {
+        args[args.length] = arguments[a];
+    }
+
+    var temp = function() {
+        return f.apply(parent, args);
+    }
+    return(temp);
+}
+
+function startClock() {
+setTimeout(function updateClock() {
+    newClock();
+    startClock();
+}.bind(this), 1000);
+}
+
+startClock();
 }
